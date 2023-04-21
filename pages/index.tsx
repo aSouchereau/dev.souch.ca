@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import {projects} from "@/utils/projects";
 import HeroSection from "@/components/HeroSectionComponent";
 import Nav from "@/components/NavComponent";
+import AboutSection from "@/components/AboutSectionComponent";
+import ProjectSection from "@/components/ProjectSectionComponent";
+import Footer from "@/components/FooterComponent";
+import ProjectComponent from "@/components/ProjectComponent";
 
-// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -18,6 +21,21 @@ export default function Home() {
       <main>
           <Nav></Nav>
           <HeroSection></HeroSection>
+          <AboutSection></AboutSection>
+          <ProjectSection>
+              {
+                projects.map((project) => (
+                    <ProjectComponent
+                        title={project.title}
+                        slug={project.slug}
+                        subtitle={project.subtitle}
+                        description={project.description}
+                        images={project.images}
+                        tags={project.tags}
+                    />
+                ))
+              }
+          </ProjectSection>
       </main>
       <Footer></Footer>
     </>
