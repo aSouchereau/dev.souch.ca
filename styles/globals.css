@@ -58,6 +58,15 @@ section#hero {
   background-position: center;
 }
 
+section#about {
+  min-height: 272px;
+  background-color: rgb(var(--primary-blue-rgb));
+}
+
+section#project {
+  min-height: 544px;
+}
+
 /*****************
     Typography
 ******************/
