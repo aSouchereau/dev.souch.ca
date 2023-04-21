@@ -19,6 +19,7 @@ export default function Home() {
           <Nav></Nav>
           <HeroSection></HeroSection>
       </main>
+      <Footer></Footer>
     </>
   )
 }
