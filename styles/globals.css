@@ -150,3 +150,18 @@ ul.nav-list .nav-item:hover {
   left: -3px;
   color: rgb(var(--neutral-blue-rgb));
 }
+
+
+/*****************
+    Components
+******************/
+
+/*  Tag  */
+div.tag-wrapper {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: rgb(var(--secondary-blue-rgb));
+  background: rgb(var(--primary-yellow-rgb));
+  background: linear-gradient(304deg, rgba(var(--primary-yellow-rgb),1) 50%, rgba(var(--secondary-yellow-rgb),1) 100%);
+  font-size: 0.75em;
+}
