@@ -32,6 +32,7 @@ export default function Home() {
                         description={project.description}
                         images={project.images}
                         tags={project.tags}
+                        light={true}
                     />
                 ))
               }

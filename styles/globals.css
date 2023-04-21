@@ -27,7 +27,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: rgb(var(--light-rgb));
+  background-color: rgb(var(--primary-blue-rgb));
 }
 
 
@@ -110,7 +110,7 @@ h3 {
   margin-bottom: 0.5rem;
   color: rgb(var(--secondary-blue-rgb));
 }
-h3.light {color: rgb(var(--neutral-blue-rgb))}
+h3.light {color: rgb(var(--light-rgb))}
 
 h4 {
   font-family: var(--main-font);
@@ -119,6 +119,7 @@ h4 {
   margin-bottom: 0.5rem;
   color: rgb(var(--neutral-blue-rgb));
 }
+h4.light {color: rgb(var(--neutral-blue-rgb))}
 
 span.caption {
   font-family: var(--main-font);
