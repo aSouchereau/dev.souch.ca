@@ -81,6 +81,9 @@ body {
   font-size: 1rem;
   font-weight: 500;
 }
+.light {
+  color: rgb(var(--light-rgb));
+}
 
 h1 {
   font-family: var(--style-font);
@@ -89,6 +92,7 @@ h1 {
   line-height: 3.5rem;
   color: rgb(var(--primary-blue-rgb));
 }
+h1.light {color: rgb(var(--primary-yellow-rgb))}
 
 h2 {
   font-family: var(--main-font);
@@ -97,6 +101,7 @@ h2 {
   margin-bottom: 0.5rem;
   color: rgb(var(--secondary-blue-rgb));
 }
+h2.light {color: rgb(var(--light-rgb))}
 
 h3 {
   font-family: var(--main-font);
@@ -105,6 +110,7 @@ h3 {
   margin-bottom: 0.5rem;
   color: rgb(var(--secondary-blue-rgb));
 }
+h3.light {color: rgb(var(--neutral-blue-rgb))}
 
 h4 {
   font-family: var(--main-font);
