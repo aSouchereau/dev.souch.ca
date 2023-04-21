@@ -122,8 +122,19 @@ ul.nav-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 1.25em;
+  gap: 1rem;
 }
 ul.nav-list .nav-item {
   color: rgb(var(--light-rgb));
+}
+
+ul.nav-list .nav-item a {
+  display: block;
+  padding: 5px 0;
+}
+
+ul.nav-list .nav-item:hover {
+  position: relative;
+  left: -3px;
+  color: rgb(var(--neutral-blue-rgb));
 }
