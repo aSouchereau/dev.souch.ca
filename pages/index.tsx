@@ -8,6 +8,7 @@ import ProjectSection from "@/components/ProjectSectionComponent";
 import Footer from "@/components/FooterComponent";
 import ProjectComponent from "@/components/ProjectComponent";
 import SkillsSection from "@/components/SkillsSectionComponent";
+import ContactSection from "@/components/ContactSectionComponent";
 
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
                 ))
               }
           </ProjectSection>
+          <ContactSection></ContactSection>
       </main>
       <Footer></Footer>
     </>
