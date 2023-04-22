@@ -5,9 +5,9 @@ export default function ContactSection() {
             <div className='contact-item'>
                 <form action="mailto:alex@souch.ca?subject=Portfolio Inquiry" method="post" encType='text/plain'>
                     <label htmlFor="email_address">Email</label>
-                    <input type="text" name='email_address' id='email_address' maxLength='100' placeholder='Email'/>
+                    <input type="text" name='email_address' id='email_address' maxLength={100} placeholder='Email'/>
                     <label htmlFor="message">Message</label>
-                    <textarea name='message' id='message' rows='8' cols='30' maxLength='300' placeholder='Type your message...'/>
+                    <textarea name='message' id='message' maxLength={300} placeholder='Type your message...'/>
                     <input className='input-button' type="submit" value='Send'/>
                 </form>
             </div>

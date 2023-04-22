@@ -211,6 +211,9 @@ div.tag-wrapper {
   outline: none !important;
   border: 2px solid rgb(var(--primary-yellow-rgb));
 }
+.contact-item textarea {
+  min-height: 8rem;
+}
 
 .contact-item input.input-button {
   background: rgb(var(--primary-blue-rgb));
