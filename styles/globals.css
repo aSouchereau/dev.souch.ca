@@ -85,7 +85,8 @@ section#skills .skills-wrapper .skill-content {
 }
 
 section#contact {
-
+  min-height: 272px;
+  background: rgb(var(--neutral-blue-rgb));
 }
 
 /*****************
