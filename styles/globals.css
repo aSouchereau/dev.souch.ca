@@ -66,6 +66,15 @@ section#hero {
 section#about {
   min-height: 272px;
   background-color: rgb(var(--primary-blue-rgb));
+  display: flex;
+  gap: 4rem;
+}
+section#about .about-item {
+  width: calc(50% - 2rem);
+}
+section#about .about-item.image-wrapper > img {
+  background: rgb(var(--secondary-blue-rgb));
+  box-shadow: 1em 1em rgb(var(--primary-yellow-rgb));
 }
 
 section#project {
@@ -152,6 +161,10 @@ span.caption {
   font-weight: 300;
   margin-bottom: 0.1rem;
   color: rgb(var(--neutral-blue-rgb));
+}
+
+p {
+  line-height: 1.75em;
 }
 
 
