@@ -72,6 +72,22 @@ section#project {
   min-height: 544px;
 }
 
+section#skills {
+  min-height: 272px;
+  background: rgb(var(--neutral-blue-rgb));
+}
+section#skills .skills-wrapper {
+  gap: 4em;
+  display: flex;
+}
+section#skills .skills-wrapper .skill-content {
+  min-width: calc(50% - 2em);
+}
+
+section#contact {
+
+}
+
 /*****************
     Typography
 ******************/
@@ -80,6 +96,7 @@ body {
   font-family: var(--main-font);
   font-size: 1rem;
   font-weight: 500;
+  color: rgb(var(--primary-blue-rgb));
 }
 .light {
   color: rgb(var(--light-rgb));
