@@ -220,3 +220,10 @@ div.tag-wrapper {
 .contact-item input.input-button:hover {
   background: rgb(var(--secondary-blue-rgb));
 }
+
+.contact-item.personal-info .contact-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
