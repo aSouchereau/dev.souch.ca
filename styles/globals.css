@@ -80,6 +80,13 @@ section#about .about-item.image-wrapper > img {
 section#project {
   min-height: 544px;
 }
+section#project .project {
+  display: flex;
+  margin-bottom: 5rem;
+}
+section#project .project > * {
+  width: 50%;
+}
 
 section#skills {
   min-height: 272px;
@@ -195,6 +202,11 @@ ul.nav-list .nav-item:hover {
 ******************/
 
 /*  Tag  */
+.tag-list {
+  display: flex;
+  gap: 0.75em;
+}
+
 div.tag-wrapper {
   display: inline-block;
   padding: 0.5em 0.75em;
