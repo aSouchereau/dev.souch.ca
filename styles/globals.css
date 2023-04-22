@@ -204,6 +204,7 @@ ul.nav-list .nav-item:hover {
 /*  Tag  */
 .tag-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75em;
   margin-bottom: 1em;
 }
@@ -255,4 +256,37 @@ div.tag-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+/*****************
+    Media Queries
+******************/
+@media screen and (max-width: 450px) {
+  section#project .project {
+    flex-direction: column;
+  }
+  section#project .project > * {
+    width: 100%;
+  }
+
+  section#about {
+    flex-direction: column;
+  }
+  section#about .about-item {
+    width: 100%;
+  }
+
+  section#skills .skills-wrapper {
+    flex-direction: column;
+  }
+  section#skills .skills-wrapper .skill-content {
+    width: 100%;
+  }
+
+  section#contact .contact-content {
+    flex-direction: column;
+  }
+  section#contact .contact-content .contact-item {
+    width: 100%;
+  }
 }
