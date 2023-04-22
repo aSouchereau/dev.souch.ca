@@ -50,6 +50,9 @@ nav#main-nav {
   padding: 8rem 4rem 1.5rem 2rem;
   background-color: rgb(var(--primary-blue-rgb));
 }
+nav#main-nav #hero-content-mobile {
+  display: none;
+}
 
 section {
   padding: 3rem 4rem;
@@ -288,5 +291,16 @@ div.tag-wrapper {
   }
   section#contact .contact-content .contact-item {
     width: 100%;
+  }
+
+
+  section#hero #hero-content {
+    display: none;
+  }
+  nav#main-nav #hero-content-mobile {
+    display: block;
+  }
+  nav#main-nav {
+    background: rgba(var(--primary-blue-rgb),0.75);
   }
 }
