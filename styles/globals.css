@@ -77,16 +77,23 @@ section#skills {
   background: rgb(var(--neutral-blue-rgb));
 }
 section#skills .skills-wrapper {
-  gap: 4em;
+  gap: 4rem;
   display: flex;
 }
 section#skills .skills-wrapper .skill-content {
-  min-width: calc(50% - 2em);
+  min-width: calc(50% - 2rem);
 }
 
 section#contact {
   min-height: 272px;
   background: rgb(var(--neutral-blue-rgb));
+}
+section#contact .contact-content {
+  display: flex;
+  gap: 4rem;
+}
+section#contact .contact-content .contact-item {
+  width: calc(50% - 2rem);
 }
 
 /*****************
@@ -182,4 +189,34 @@ div.tag-wrapper {
   background: rgb(var(--primary-yellow-rgb));
   background: linear-gradient(304deg, rgba(var(--primary-yellow-rgb),1) 50%, rgba(var(--secondary-yellow-rgb),1) 100%);
   font-size: 0.75em;
+}
+
+/*  Form Controls */
+.contact-item label {
+  display: block;
+  margin: 0 0 0.25rem 0;
+}
+.contact-item input, .contact-item textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 1rem 0;
+  background: rgb(var(--secondary-blue-rgb));
+  border: 3px solid rgb(var(--primary-blue-rgb));
+  border-radius: 5px;
+  color: rgb(var(--light-rgb));
+  font-size: 1rem;
+}
+.contact-item input:focus, .contact-item textarea:focus {
+  outline: none !important;
+  border: 2px solid rgb(var(--primary-yellow-rgb));
+}
+
+.contact-item input.input-button {
+  background: rgb(var(--primary-blue-rgb));
+  border: 3px solid rgb(var(--primary-blue-rgb));
+  cursor: pointer;
+}
+.contact-item input.input-button:hover {
+  background: rgb(var(--secondary-blue-rgb));
 }
