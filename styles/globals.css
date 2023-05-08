@@ -239,7 +239,7 @@ div.tag-wrapper {
 }
 .contact-item input:focus, .contact-item textarea:focus {
   outline: none !important;
-  border: 2px solid rgb(var(--primary-yellow-rgb));
+  border: 3px solid rgb(var(--primary-yellow-rgb));
 }
 .contact-item textarea {
   min-height: 8rem;
