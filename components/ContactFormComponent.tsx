@@ -19,6 +19,7 @@ export default function ContactForm() {
                 id="email"
                 type="email"
                 name="email"
+                placeholder="Your email address"
             />
             <ValidationError
                 prefix="Email"
@@ -28,13 +29,14 @@ export default function ContactForm() {
             <textarea
                 id="message"
                 name="message"
+                placeholder="Your message"
             />
             <ValidationError
                 prefix="Message"
                 field="message"
                 errors={state.errors}
             />
-            <input className='input-button' type="submit" disabled={state.submitting} value='Submit'>
+            <input className='input-button' type="submit" disabled={state.submitting} value='Send'>
             </input>
         </form>
     );
