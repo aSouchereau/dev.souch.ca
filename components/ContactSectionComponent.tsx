@@ -1,15 +1,11 @@
+import ContactForm from "@/components/ContactFormComponent";
+
 export default function ContactSection() {
     return <section id='contact'>
         <h2>Get In Touch</h2>
         <div className='contact-content'>
             <div className='contact-item'>
-                <form action="mailto:alex@souch.ca?subject=Portfolio Inquiry" method="post" encType='text/plain'>
-                    <label htmlFor="email_address">Email</label>
-                    <input type="text" name='email_address' id='email_address' maxLength={100} placeholder='Email'/>
-                    <label htmlFor="message">Message</label>
-                    <textarea name='message' id='message' maxLength={300} placeholder='Type your message...'/>
-                    <input className='input-button' type="submit" value='Send'/>
-                </form>
+                <ContactForm></ContactForm>
             </div>
             <div className='contact-item personal-info'>
                 <h3>Contact</h3>

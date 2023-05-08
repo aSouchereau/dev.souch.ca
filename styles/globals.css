@@ -55,7 +55,7 @@ nav#main-nav #hero-content-mobile {
 }
 
 section {
-  padding: 3rem 4rem;
+  padding: 3rem 10rem;
 }
 
 section#hero {
@@ -253,6 +253,19 @@ div.tag-wrapper {
 .contact-item input.input-button:hover {
   background: rgb(var(--secondary-blue-rgb));
 }
+
+.contact-item .thanks-message {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.contact-item .thanks-message .dismiss-button {
+  cursor: pointer;
+}
+.contact-item .thanks-message .dismiss-button:hover {
+  color: rgb(var(--secondary-blue-rgb));
+}
+
 
 .contact-item.personal-info .contact-list {
   list-style-type: none;
