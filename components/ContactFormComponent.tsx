@@ -1,12 +1,10 @@
 import { useForm, ValidationError } from '@formspree/react';
-import {X} from "@phosphor-icons/react";
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("mwkjyqwk");
     if (state.succeeded) {
         return <>
             <div className='thanks-message'>
                 <p>Thanks! I'll get back to you shortly...</p>
-                <X size={24} weight="bold" role='button' className='dismiss-button'/>
             </div>
         </>;
     }
