@@ -6,8 +6,6 @@ type Props = {
 
 export default function ProjectSection({children} : Props) {
     return <section id='project'>
-        <div className='projects-container'>
             {children}
-        </div>
     </section>
 }
