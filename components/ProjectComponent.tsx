@@ -16,7 +16,7 @@ export default function ProjectComponent(project: Project) {
                 ))}
             </div>
 
-            <p className='light'>{project.description}</p>
+            <p className='light'>{project.summary}</p>
         </div>
         <div className='project-image image-wrapper'>
             <span></span>

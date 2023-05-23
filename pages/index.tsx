@@ -32,7 +32,7 @@ export default function Home() {
                         title={project.title}
                         slug={project.slug}
                         subtitle={project.subtitle}
-                        description={project.description}
+                        summary={project.summary}
                         images={project.images}
                         tags={project.tags}
                     />

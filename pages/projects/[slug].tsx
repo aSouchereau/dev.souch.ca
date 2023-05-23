@@ -13,7 +13,7 @@ export default function ProjectDetails() {
             title={project.title}
             slug={project.slug}
             subtitle={project.subtitle}
-            description={project.description}
+            summary={project.summary}
             images={project.images}
             tags={project.tags}
         /> : <span>Project Not Found</span>}
