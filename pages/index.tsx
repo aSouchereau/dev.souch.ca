@@ -28,14 +28,16 @@ export default function Home() {
           <ProjectSection>
               {
                 projects.map((project) => (
-                    <ProjectPreviewComponent
-                        title={project.title}
-                        slug={project.slug}
-                        subtitle={project.subtitle}
-                        summary={project.summary}
-                        images={project.images}
-                        tags={project.tags}
-                    />
+                    <div key={project.slug}>
+                        <ProjectPreviewComponent
+                            title={project.title}
+                            slug={project.slug}
+                            subtitle={project.subtitle}
+                            summary={project.summary}
+                            images={project.images}
+                            tags={project.tags}
+                        />
+                    </div>
                 ))
               }
           </ProjectSection>
