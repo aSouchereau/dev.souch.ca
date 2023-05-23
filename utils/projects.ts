@@ -3,6 +3,7 @@ export type Project = {
     slug: string,
     subtitle: string,
     summary: string,
+    description?: string[],
     images: string[],
     tags: string[]
 }
