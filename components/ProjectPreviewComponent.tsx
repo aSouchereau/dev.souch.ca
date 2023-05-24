@@ -19,7 +19,15 @@ export default function ProjectPreviewComponent(project: Project) {
             <p className='light'>{project.summary}</p>
         </div>
         <div className='project-image image-wrapper'>
-            <span></span>
+            <Image src={project.images[0]}
+                   alt={project.title + ' - ' + project.subtitle}
+                   fill={true}
+                   placeholder="blur"
+                   blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8/P7/fwAJIAPCoBSd9wAAAABJRU5ErkJggg=="
+                   loading="lazy"
+                   style={ {objectFit: "cover"} }
+            />
+            <div className='test'></div>
         </div>
     </div>;
 }

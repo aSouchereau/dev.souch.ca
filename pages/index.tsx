@@ -6,7 +6,7 @@ import Nav from "@/components/NavComponent";
 import AboutSection from "@/components/AboutSectionComponent";
 import ProjectSection from "@/components/ProjectSectionComponent";
 import Footer from "@/components/FooterComponent";
-import ProjectPreviewComponent from "@/components/ProjectComponent";
+import ProjectPreviewComponent from "@/components/ProjectPreviewComponent";
 import SkillsSection from "@/components/SkillsSectionComponent";
 import ContactSection from "@/components/ContactSectionComponent";
 
@@ -27,18 +27,18 @@ export default function Home() {
           <SkillsSection></SkillsSection>
           <ProjectSection>
               {
-                projects.map((project) => (
-                        <div className='projects-container' key={project.slug}>
-                            <ProjectPreviewComponent
-                                title={project.title}
-                                slug={project.slug}
-                                subtitle={project.subtitle}
-                                summary={project.summary}
-                                images={project.images}
-                                tags={project.tags}
-                            />
-                        </div>
-                ))
+                  projects.map((project) => (
+                      <div className='projects-container' key={project.slug}>
+                          <ProjectPreviewComponent
+                              title={project.title}
+                              slug={project.slug}
+                              subtitle={project.subtitle}
+                              summary={project.summary}
+                              images={project.images}
+                              tags={project.tags}
+                          />
+                      </div>
+                  ))
               }
           </ProjectSection>
           <ContactSection></ContactSection>

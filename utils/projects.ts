@@ -4,7 +4,7 @@ export type Project = {
     subtitle: string,
     summary: string,
     description?: string[],
-    images: string[],
+    images: any[],
     tags: string[]
 }
 
@@ -15,7 +15,16 @@ export const projects : Project[] = [
         subtitle: "Website Rebuild",
         summary: "City Cyclery is a local bike shop in Windsor, ON. The project involved a small rebrand, and a new website. I was a part of a 4 person team for this project, and took on a project management role. We used Microsoft Project to create an overall timeline for the project, and a Github Project for development tasks. We built the site in NextJs with Typescript and used TailwindCSS for styles. The tasks were split mostly evenly, so we all got to solve a diverse set of problems. My main focus was on the events api and page.",
         images: [
-            "/images/hero-small-640.jpg"
+            {
+                headerText: null,
+                subText: null,
+                image: "/images/hero-small-640.jpg"
+            },
+            {
+                headerText: null,
+                subText: null,
+                image: "/images/hero-small-640.jpg"
+            },
         ],
         tags: [
             "Frontend", "NextJs", "Tailwind", "Typescript"

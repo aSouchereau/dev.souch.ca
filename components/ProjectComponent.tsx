@@ -1,6 +1,5 @@
 import {Project} from "@/utils/projects";
 import ProjectTag from "@/components/TagComponent";
-import Image from "next/image";
 
 
 export default function ProjectComponent(project: Project) {
@@ -17,9 +16,6 @@ export default function ProjectComponent(project: Project) {
             </div>
 
             <p className='light'>{project.summary}</p>
-        </div>
-        <div className='project-image image-wrapper'>
-            <span></span>
         </div>
     </div>;
 }
