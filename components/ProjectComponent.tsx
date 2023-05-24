@@ -1,6 +1,8 @@
 import {Project} from "@/utils/projects";
 import ProjectTag from "@/components/TagComponent";
 import Image from "next/image";
+import ButtonComponent from "@/components/ButtonComponent";
+import {ArrowSquareOut, GitBranch} from "@phosphor-icons/react";
 
 
 export default function ProjectComponent(project: Project) {
@@ -17,6 +19,22 @@ export default function ProjectComponent(project: Project) {
             </div>
 
             <p className='light'>{project.description}</p>
+            <div className='project-actions button-wrapper'>
+                <ButtonComponent
+                    icon={<ArrowSquareOut/>}
+                    destination={project.demoLink}
+                    buttonType='outline'
+                >
+                    Visit Demo
+                </ButtonComponent>
+                <ButtonComponent
+                    icon={<GitBranch/>}
+                    destination={project.repoLink}
+                    buttonType='solid'
+                >
+                    View Code
+                </ButtonComponent>
+            </div>
         </div>
         <div className='project-image image-wrapper'>
             <span></span>

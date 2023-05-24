@@ -221,6 +221,49 @@ div.tag-wrapper {
   font-size: 0.75em;
 }
 
+/*  Button Component */
+div.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+a.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9em;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+a.button.solid {
+  background: rgb(var(--primary-yellow-rgb));
+  background: linear-gradient(304deg, rgba(var(--primary-yellow-rgb),1) 50%, rgba(var(--secondary-yellow-rgb),1) 100%);
+  color: rgb(var(--secondary-blue-rgb));
+}
+a.button.solid:hover {
+  background: linear-gradient(304deg, rgba(var(--primary-yellow-rgb),1) 0%, rgba(var(--secondary-yellow-rgb),1) 20%);
+}
+
+a.button.outline {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(304deg, rgba(var(--primary-yellow-rgb),1) 50%, rgba(var(--secondary-yellow-rgb),1) 100%);
+  border-image-slice: 1;
+  color: rgb(var(--primary-yellow-rgb));
+}
+a.button.outline:hover {
+  background: linear-gradient(304deg, rgba(var(--primary-yellow-rgb),1) 0%, rgba(var(--secondary-yellow-rgb),1) 20%);
+  color: rgb(var(--secondary-blue-rgb));
+}
 /*  Form Controls */
 .contact-item label {
   display: block;
