@@ -4,7 +4,7 @@ export default function AboutSection() {
     return <section id='about'>
         <div className='about-item intro-paragraph'>
             <h2 className='light'>Hey, I’m Alex. </h2>
-            <p className='light'>I’m a full stack developer with a focus on front-end. I have an eye for design and enjoy creating visually appealing websites. I’ve studied to become a web developer for the past 2 years. And additionally, I have 6 years of experience creating graphics and layouts with the Adobe Suite. I’m passionate about development and I love to learn.</p>
+            <p className='light'>I'm a front-end focused full stack developer with 2 years of dedicated study in web development. I'm passionate about learning and creating visually appealing sites and apps.</p>
         </div>
         <div className='about-item image-wrapper'>
             <Image src="/images/portrait.jpg" alt="Picture of Me" loading='lazy' width={300} height={300}/>
