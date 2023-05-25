@@ -15,8 +15,8 @@ export const projects : Project[] = [
         slug: "city-cyclery",
         subtitle: "Website Rebuild",
         description: "City Cyclery is a local bike shop in Windsor, ON. The project involved a small rebrand, and a new website. The site was built in NextJs with Typescript and used TailwindCSS for styles.\n",
-        demoLink: '',
-        repoLink: '',
+        demoLink: 'https://city-cyclery.vercel.app/',
+        repoLink: 'https://github.com/carbondesigned/CityCyclery',
         images: [
             "/images/hero-small-640.jpg"
         ],
@@ -30,7 +30,7 @@ export const projects : Project[] = [
         subtitle: "Self Hosted Personal Dashboard",
         description: "Linkboard is a self-hosted homepage for homelabbers and their users. It’s built in Laravel, and incorporates user authentication, a permissions system, a link sharing system, and custom themes.",
         demoLink: '',
-        repoLink: '',
+        repoLink: 'https://github.com/aSouchereau/linkboard',
         images: [
             "/images/hero-small-640.jpg"
         ],
@@ -44,7 +44,7 @@ export const projects : Project[] = [
         subtitle: "Client Connection Router for Minecraft Servers",
         description: "MC Route Manager is a management system for a 3rd party tcp router for minecraft client connections. Built in Laravel, the system makes API calls to the router to manage routes. It adds extra functionality like persistent routes, route groups, garbage collection, toggleable and editable routes.",
         demoLink: '',
-        repoLink: '',
+        repoLink: 'https://github.com/aSouchereau/mcroute-manager',
         images: [
             "/images/hero-small-640.jpg"
         ],
