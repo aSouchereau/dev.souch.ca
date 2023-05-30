@@ -334,10 +334,14 @@ a.button.outline:hover {
   }
 
   section#about {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   section#about .about-item {
-    width: 100%;
+    width: auto;
+  }
+  section#about.image-wrapper img {
+    display: block;
+    margin: 0 auto;
   }
 
   section#skills .skills-wrapper {
