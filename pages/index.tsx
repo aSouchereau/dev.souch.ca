@@ -33,7 +33,7 @@ export default function Home() {
                         slug={project.slug}
                         subtitle={project.subtitle}
                         description={project.description}
-                        images={project.images}
+                        video={project.video}
                         tags={project.tags}
                         demoLink={project.demoLink}
                         repoLink={project.repoLink}

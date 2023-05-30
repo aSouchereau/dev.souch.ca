@@ -1,12 +1,28 @@
 import {Project} from "@/utils/projects";
 import ProjectTag from "@/components/TagComponent";
-import Image from "next/image";
 import ButtonComponent from "@/components/ButtonComponent";
 import {ArrowSquareOut, GitBranch} from "@phosphor-icons/react";
+
+/* Dynamically Import React Player */
+import dynamic from 'next/dynamic';
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 
 export default function ProjectComponent(project: Project) {
     return <div className='project' id={project.slug}>
+        <div className='project-video video-wrapper'>
+            {project.video ?
+                <ReactPlayer
+                width="90%"
+                height="40vh"
+                controls={true}
+                url={project.video}
+                light={false}/>
+                :
+                <></>
+            }
+
+        </div>
         <div className='project-content'>
             <h3 className='light'>{project.title}</h3>
             <h4 className='light'>{project.subtitle}</h4>
@@ -35,9 +51,6 @@ export default function ProjectComponent(project: Project) {
                     View Code
                 </ButtonComponent>
             </div>
-        </div>
-        <div className='project-image image-wrapper'>
-            <span></span>
         </div>
     </div>;
 }
