@@ -5,7 +5,7 @@ export type Project = {
     description: string,
     demoLink: string,
     repoLink: string,
-    video: string,
+    video?: string,
     tags: string[]
 }
 
@@ -17,7 +17,6 @@ export const projects : Project[] = [
         description: "City Cyclery is a local bike shop in Windsor, ON. The project involved a small rebrand, and a new website. The site was built in NextJs with Typescript and used TailwindCSS for styles.\n",
         demoLink: 'https://city-cyclery.vercel.app/',
         repoLink: 'https://github.com/carbondesigned/CityCyclery',
-        video: "/images/hero-small-640.jpg",
         tags: [
             "Frontend", "NextJs", "Tailwind", "Typescript"
         ]
