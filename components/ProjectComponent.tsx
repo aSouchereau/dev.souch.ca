@@ -36,13 +36,18 @@ export default function ProjectComponent(project: Project) {
 
             <p className='light'>{project.description}</p>
             <div className='project-actions button-wrapper'>
-                <ButtonComponent
+                {project.demoLink ?
+                    <ButtonComponent
                     icon={<ArrowSquareOut/>}
                     destination={project.demoLink}
                     buttonType='outline'
                 >
                     Visit Demo
                 </ButtonComponent>
+                    :
+                <></>
+                }
+
                 <ButtonComponent
                     icon={<GitBranch/>}
                     destination={project.repoLink}
