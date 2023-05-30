@@ -39,6 +39,7 @@ export const projects : Project[] = [
         subtitle: "Client Connection Router for Minecraft Servers",
         description: "MC Route Manager is a management system for a 3rd party tcp router for minecraft client connections. Built in Laravel, the system makes API calls to the router to manage routes. It adds extra functionality like persistent routes, route groups, garbage collection, toggleable and editable routes.",
         repoLink: 'https://github.com/aSouchereau/mcroute-manager',
+        demoLink: 'https://mcrouter-demo.alexsouch.com/',
         video: "/videos/mcrouter-demo.mp4",
         tags: [
             "Fullstack", "Laravel", "Bootstrap", "Docker"
