@@ -17,6 +17,7 @@ export const projects : Project[] = [
         description: "City Cyclery is a local bike shop in Windsor, ON. The project involved a small rebrand, and a new website. The site was built in NextJs with Typescript and used TailwindCSS for styles.\n",
         demoLink: 'https://city-cyclery.vercel.app/',
         repoLink: 'https://github.com/carbondesigned/CityCyclery',
+        video: '/videos/citycyclery-demo.mp4',
         tags: [
             "Frontend", "NextJs", "Tailwind", "Typescript"
         ]
