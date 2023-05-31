@@ -85,6 +85,7 @@ section#project {
 }
 section#project .project {
   display: flex;
+  gap: 4rem;
   margin-bottom: 5rem;
 }
 section#project .project > * {

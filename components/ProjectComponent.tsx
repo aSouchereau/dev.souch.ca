@@ -13,7 +13,7 @@ export default function ProjectComponent(project: Project) {
         <div className='project-video video-wrapper'>
             {project.video ?
                 <ReactPlayer
-                width="90%"
+                width="100%"
                 height="40vh"
                 controls={true}
                 url={project.video}
