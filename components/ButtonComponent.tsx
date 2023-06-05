@@ -10,7 +10,8 @@ type ButtonProps = {
 
 export default function ButtonComponent({ children, icon, buttonType, destination }: ButtonProps) {
     return <a className={'button ' + buttonType}
-                    href={destination}
+                href={destination}
+              target="_blank"
     >
         {icon}
         {children}
