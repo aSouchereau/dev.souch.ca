@@ -33,9 +33,9 @@ export default function Home() {
                         slug={project.slug}
                         subtitle={project.subtitle}
                         description={project.description}
-                        video={project.video}
+                        video={project.video ?? ""}
                         tags={project.tags}
-                        demoLink={project.demoLink}
+                        demoLink={project.demoLink ?? ""}
                         repoLink={project.repoLink}
                     />
                 ))
