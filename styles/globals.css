@@ -317,6 +317,23 @@ a.button.outline:hover {
   flex-direction: column;
   gap: 1em;
 }
+.contact-icon {
+  position: relative;
+  top: 2px;
+  margin-right: 4px;
+}
+
+
+/*  Video Player */
+.project-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
+.project-video {
+  width: 10px;
+}
 
 
 /*  Video Player */
