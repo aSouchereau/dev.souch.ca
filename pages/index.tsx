@@ -24,7 +24,7 @@ export default function Home() {
           <Nav></Nav>
           <HeroSection></HeroSection>
           <AboutSection></AboutSection>
-          <SkillsSection></SkillsSection>
+          {/*<SkillsSection></SkillsSection>*/}
           <ProjectSection>
               {
                 projects.map((project) => (
