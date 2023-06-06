@@ -24,18 +24,22 @@ export default function Home() {
           <Nav></Nav>
           <HeroSection></HeroSection>
           <AboutSection></AboutSection>
-          <SkillsSection></SkillsSection>
+          {/*<SkillsSection></SkillsSection>*/}
           <ProjectSection>
               {
                 projects.map((project) => (
-                    <ProjectComponent
-                        title={project.title}
-                        slug={project.slug}
-                        subtitle={project.subtitle}
-                        description={project.description}
-                        images={project.images}
-                        tags={project.tags}
-                    />
+                    <div key={project.slug}>
+                        <ProjectComponent
+                            title={project.title}
+                            slug={project.slug}
+                            subtitle={project.subtitle}
+                            description={project.description}
+                            video={project.video ?? ""}
+                            tags={project.tags}
+                            demoLink={project.demoLink ?? ""}
+                            repoLink={project.repoLink}
+                        />
+                    </div>
                 ))
               }
           </ProjectSection>
