@@ -2,6 +2,7 @@ import {Project} from "@/utils/projects";
 import ProjectTag from "@/components/TagComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 import {ArrowSquareOut, GitBranch} from "@phosphor-icons/react";
+import ProjectInfoComponent from "@/components/ProjectInfoComponent";
 
 /* Dynamically Import React Player */
 import dynamic from 'next/dynamic';
@@ -34,7 +35,7 @@ export default function ProjectComponent(project: Project) {
                 ))}
             </div>
 
-            <p className='light'>{project.description}</p>
+            <p className='light'>{project.summary}<br /><a href="">Learn More</a></p>
             <div className='project-actions button-wrapper'>
                 {project.demoLink ?
                     <ButtonComponent
@@ -57,5 +58,10 @@ export default function ProjectComponent(project: Project) {
                 </ButtonComponent>
             </div>
         </div>
+        <ProjectInfoComponent
+            title={project.title}
+            slug={project.slug}
+            text={project.description}
+        />
     </div>;
 }
