@@ -5,7 +5,7 @@ type ProjectInfoProps = {
 }
 
 export default function ProjectInfoComponent(props : ProjectInfoProps) {
-    return <div className={props.slug + " info-modal"}>
+    return <div id={props.slug + "-info"} className="info-modal">
             <h3 className='light'>{props.title}</h3>
             <div>
                 {
