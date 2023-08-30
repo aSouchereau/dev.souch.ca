@@ -10,6 +10,24 @@ import Modal from "react-modal";
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
+const customStyles = {
+    content: {
+        display: 'flex',
+        flexDirection: 'column' as 'column',
+        justifyContent: 'space-between',
+        top: '50%',
+        left: '50%',
+        right: '50%',
+        bottom: '-20%',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        borderRadius: '0',
+        border: 'none',
+        background: 'rgb(var(--primary-blue-rgb))',
+        padding: '2.5em 2em 6rem',
+    },
+};
+
 
 // bind modal to appElement
 Modal.setAppElement("#__next");
@@ -53,7 +71,8 @@ export default function ProjectComponent(project: Project) {
 
             <p className='light'>
                 {project.summary}<br />
-                <a onClick={openModal}>
+                <a className='link'
+                    onClick={openModal}>
                     Learn More
                 </a>
             </p>
@@ -83,15 +102,20 @@ export default function ProjectComponent(project: Project) {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             contentLabel={project.title}
+            className={'info-modal'}
+            overlayClassName={'modal-overlay'}
         >
+            <div className='modal-header'>
+                <h3 className='light'>{project.title}</h3>
+                <button onClick={closeModal}>
+                    <X />
+                </button>
+            </div>
             <ProjectInfoComponent
-                title={project.title}
                 slug={project.slug}
                 text={project.description}
             />
-            <button>
-                <X onClick={closeModal}></X>
-            </button>
+
         </Modal>
 
     </div>;
