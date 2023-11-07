@@ -337,7 +337,6 @@ a.button.outline:hover {
   inset: 50% 50% -20%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 3rem 2rem 5rem;
   margin-right: -50%;
   overflow: auto;
