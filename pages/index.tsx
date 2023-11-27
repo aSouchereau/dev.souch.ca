@@ -7,7 +7,6 @@ import AboutSection from "@/components/AboutSectionComponent";
 import ProjectSection from "@/components/ProjectSectionComponent";
 import Footer from "@/components/FooterComponent";
 import ProjectComponent from "@/components/ProjectComponent";
-import SkillsSection from "@/components/SkillsSectionComponent";
 import ContactSection from "@/components/ContactSectionComponent";
 
 
@@ -23,8 +22,6 @@ export default function Home() {
       <main>
           <Nav></Nav>
           <HeroSection></HeroSection>
-          <AboutSection></AboutSection>
-          {/*<SkillsSection></SkillsSection>*/}
           <ProjectSection>
               {
                 projects.map((project) => (
@@ -33,6 +30,7 @@ export default function Home() {
                             title={project.title}
                             slug={project.slug}
                             subtitle={project.subtitle}
+                            summary={project.summary}
                             description={project.description}
                             video={project.video ?? ""}
                             tags={project.tags}
@@ -43,6 +41,7 @@ export default function Home() {
                 ))
               }
           </ProjectSection>
+          <AboutSection></AboutSection>
           <ContactSection></ContactSection>
       </main>
       <Footer></Footer>

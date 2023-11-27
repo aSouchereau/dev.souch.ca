@@ -1,14 +1,49 @@
 import {Project} from "@/utils/projects";
 import ProjectTag from "@/components/TagComponent";
 import ButtonComponent from "@/components/ButtonComponent";
-import {ArrowSquareOut, GitBranch} from "@phosphor-icons/react";
+import {ArrowSquareOut, GitBranch, X} from "@phosphor-icons/react";
+import ProjectInfoComponent from "@/components/ProjectInfoComponent";
+import React from "react";
+import Modal from "react-modal";
 
 /* Dynamically Import React Player */
 import dynamic from 'next/dynamic';
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
+const customStyles = {
+    content: {
+        display: 'flex',
+        flexDirection: 'column' as 'column',
+        justifyContent: 'space-between',
+        top: '50%',
+        left: '50%',
+        right: '50%',
+        bottom: '-20%',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        borderRadius: '0',
+        border: 'none',
+        background: 'rgb(var(--primary-blue-rgb))',
+        padding: '2.5em 2em 6rem',
+    },
+};
+
+
+// bind modal to appElement
+Modal.setAppElement("#__next");
 
 export default function ProjectComponent(project: Project) {
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return <div className='project' id={project.slug}>
         <div className='project-video video-wrapper'>
             {project.video ?
@@ -34,7 +69,17 @@ export default function ProjectComponent(project: Project) {
                 ))}
             </div>
 
-            <p className='light'>{project.description}</p>
+            <p className='light'>
+                {project.summary}<br />
+                {project.description ?
+                    <a className='link'
+                        onClick={openModal}>
+                        Learn More
+                    </a>
+                    :
+                    <></>
+                }
+            </p>
             <div className='project-actions button-wrapper'>
                 {project.demoLink ?
                     <ButtonComponent
@@ -57,5 +102,29 @@ export default function ProjectComponent(project: Project) {
                 </ButtonComponent>
             </div>
         </div>
+        {project.description ?
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel={project.title}
+                className={'info-modal'}
+                overlayClassName={'modal-overlay'}
+            >
+                <div className='modal-header'>
+                    <h3 className='light'>{project.title}</h3>
+                    <button onClick={closeModal}>
+                        <X />
+                    </button>
+                </div>
+                    <ProjectInfoComponent
+                        slug={project.slug}
+                        text={project.description}
+                    />
+
+            </Modal>
+            :
+            <></>
+        }
+
     </div>;
 }
