@@ -22,7 +22,6 @@ export default function Home() {
       <main>
           <Nav></Nav>
           <HeroSection></HeroSection>
-          <AboutSection></AboutSection>
           <ProjectSection>
               {
                 projects.map((project) => (
@@ -42,6 +41,7 @@ export default function Home() {
                 ))
               }
           </ProjectSection>
+          <AboutSection></AboutSection>
           <ContactSection></ContactSection>
       </main>
       <Footer></Footer>
