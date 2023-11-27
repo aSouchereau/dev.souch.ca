@@ -7,7 +7,6 @@ import AboutSection from "@/components/AboutSectionComponent";
 import ProjectSection from "@/components/ProjectSectionComponent";
 import Footer from "@/components/FooterComponent";
 import ProjectComponent from "@/components/ProjectComponent";
-import SkillsSection from "@/components/SkillsSectionComponent";
 import ContactSection from "@/components/ContactSectionComponent";
 
 
@@ -24,7 +23,6 @@ export default function Home() {
           <Nav></Nav>
           <HeroSection></HeroSection>
           <AboutSection></AboutSection>
-          {/*<SkillsSection></SkillsSection>*/}
           <ProjectSection>
               {
                 projects.map((project) => (
