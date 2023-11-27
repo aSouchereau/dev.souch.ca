@@ -71,10 +71,14 @@ export default function ProjectComponent(project: Project) {
 
             <p className='light'>
                 {project.summary}<br />
-                <a className='link'
-                    onClick={openModal}>
-                    Learn More
-                </a>
+                {project.description ?
+                    <a className='link'
+                        onClick={openModal}>
+                        Learn More
+                    </a>
+                    :
+                    <></>
+                }
             </p>
             <div className='project-actions button-wrapper'>
                 {project.demoLink ?
@@ -98,25 +102,29 @@ export default function ProjectComponent(project: Project) {
                 </ButtonComponent>
             </div>
         </div>
-        <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            contentLabel={project.title}
-            className={'info-modal'}
-            overlayClassName={'modal-overlay'}
-        >
-            <div className='modal-header'>
-                <h3 className='light'>{project.title}</h3>
-                <button onClick={closeModal}>
-                    <X />
-                </button>
-            </div>
-            <ProjectInfoComponent
-                slug={project.slug}
-                text={project.description}
-            />
+        {project.description ?
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel={project.title}
+                className={'info-modal'}
+                overlayClassName={'modal-overlay'}
+            >
+                <div className='modal-header'>
+                    <h3 className='light'>{project.title}</h3>
+                    <button onClick={closeModal}>
+                        <X />
+                    </button>
+                </div>
+                    <ProjectInfoComponent
+                        slug={project.slug}
+                        text={project.description}
+                    />
 
-        </Modal>
+            </Modal>
+            :
+            <></>
+        }
 
     </div>;
 }
