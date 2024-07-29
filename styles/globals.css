@@ -446,4 +446,8 @@ a.button.outline:hover {
     background: rgba(var(--primary-blue-rgb),0.75);
   }
 
+  section#project .project-cover {
+    display: none;
+  }
+
 }
