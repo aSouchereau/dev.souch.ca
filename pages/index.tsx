@@ -33,6 +33,7 @@ export default function Home() {
                             summary={project.summary}
                             description={project.description}
                             video={project.video ?? ""}
+                            cover={project.cover ?? ""}
                             tags={project.tags}
                             demoLink={project.demoLink ?? ""}
                             repoLink={project.repoLink}

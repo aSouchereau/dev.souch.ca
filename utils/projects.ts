@@ -7,6 +7,7 @@ export type Project = {
     demoLink?: string,
     repoLink: string,
     video?: string,
+    cover?: string,
     tags: string[]
 }
 
@@ -33,6 +34,7 @@ export const projects : Project[] = [
         summary: "souch.ca is my personal photography portfolio. The site is built with Vue3, using vite-ssg and Fancyapps for some ui components. It consumes the API from a self-hosted instance of Lychee Photo Manager to help with albums, content organization, and thumbnails.",
         demoLink: "https://souch.ca",
         repoLink: "https://github.com/aSouchereau/souch.ca",
+        cover: "/images/covers/souch.ca_logomark-fullColour.png",
         tags: [
             "Frontend", "Vue", "Typescript", "Vite"
         ]

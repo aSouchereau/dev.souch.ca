@@ -85,11 +85,15 @@ section#project {
 }
 section#project .project {
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
   margin-bottom: 5rem;
 }
 section#project .project > * {
   width: 50%;
+}
+
+section#project .project-cover {
+  text-align: right;
 }
 
 section#skills {
@@ -390,18 +394,6 @@ a.button.outline:hover {
   width: 10px;
 }
 
-
-/*  Video Player */
-.project-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-top: 0.5rem;
-}
-.project-video {
-  width: 10px;
-}
-
 /*****************
     Media Queries
 ******************/
@@ -454,8 +446,4 @@ a.button.outline:hover {
     background: rgba(var(--primary-blue-rgb),0.75);
   }
 
-
-  .project-video {
-    display: none;
-  }
 }

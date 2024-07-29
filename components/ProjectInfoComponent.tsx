@@ -1,5 +1,7 @@
 import React from "react";
-import ReactPlayer from "react-player";
+/* Dynamically Import React Player */
+import dynamic from 'next/dynamic';
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 type ProjectInfoProps = {
     slug: string;
