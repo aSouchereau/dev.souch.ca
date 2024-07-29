@@ -71,7 +71,7 @@ export default function ProjectComponent(project: Project) {
 
             <p className='light'>
                 {project.summary}<br />
-                {project.description ?
+                {project.description || project.video ?
                     <a className='link'
                         onClick={openModal}>
                         Learn More
@@ -102,7 +102,7 @@ export default function ProjectComponent(project: Project) {
                 </ButtonComponent>
             </div>
         </div>
-        {project.description ?
+        {project.description || project.video ?
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
@@ -119,6 +119,7 @@ export default function ProjectComponent(project: Project) {
                     <ProjectInfoComponent
                         slug={project.slug}
                         text={project.description}
+                        video={project.video}
                     />
 
             </Modal>
