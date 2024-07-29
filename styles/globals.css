@@ -55,7 +55,7 @@ nav#main-nav #hero-content-mobile {
 }
 
 section {
-  padding: 3rem 15rem;
+  padding: 3rem 25rem;
 }
 
 section#hero {
@@ -397,7 +397,7 @@ a.button.outline:hover {
 /*****************
     Media Queries
 ******************/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1450px) {
   section {
     padding: 3rem 2rem ;
   }
