@@ -17,7 +17,7 @@ export default function Home() {
         <title>Alex Souchereau</title>
         <meta name="description" content="Alex Souchereau - Portfolio - Full Stack Web Developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
           <Nav></Nav>
@@ -33,6 +33,7 @@ export default function Home() {
                             summary={project.summary}
                             description={project.description}
                             video={project.video ?? ""}
+                            cover={project.cover ?? ""}
                             tags={project.tags}
                             demoLink={project.demoLink ?? ""}
                             repoLink={project.repoLink}

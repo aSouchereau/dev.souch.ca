@@ -5,10 +5,7 @@ import {ArrowSquareOut, GitBranch, X} from "@phosphor-icons/react";
 import ProjectInfoComponent from "@/components/ProjectInfoComponent";
 import React from "react";
 import Modal from "react-modal";
-
-/* Dynamically Import React Player */
-import dynamic from 'next/dynamic';
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+import Image from "next/image";
 
 const customStyles = {
     content: {
@@ -45,14 +42,9 @@ export default function ProjectComponent(project: Project) {
     }
 
     return <div className='project' id={project.slug}>
-        <div className='project-video video-wrapper'>
-            {project.video ?
-                <ReactPlayer
-                width="100%"
-                height="40vh"
-                controls={true}
-                url={project.video}
-                light={false}/>
+        <div className='project-cover'>
+            {project.cover ?
+                    <Image src={project.cover} alt={project.title} width={200} height={200} quality={100} style={{ width: '250px', height: 'auto'}}/>
                 :
                 <></>
             }
@@ -71,7 +63,7 @@ export default function ProjectComponent(project: Project) {
 
             <p className='light'>
                 {project.summary}<br />
-                {project.description ?
+                {project.description || project.video ?
                     <a className='link'
                         onClick={openModal}>
                         Learn More
@@ -102,7 +94,7 @@ export default function ProjectComponent(project: Project) {
                 </ButtonComponent>
             </div>
         </div>
-        {project.description ?
+        {project.description || project.video ?
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
@@ -119,6 +111,7 @@ export default function ProjectComponent(project: Project) {
                     <ProjectInfoComponent
                         slug={project.slug}
                         text={project.description}
+                        video={project.video}
                     />
 
             </Modal>

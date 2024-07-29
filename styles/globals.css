@@ -55,7 +55,7 @@ nav#main-nav #hero-content-mobile {
 }
 
 section {
-  padding: 3rem 15rem;
+  padding: 3rem 25rem;
 }
 
 section#hero {
@@ -85,11 +85,15 @@ section#project {
 }
 section#project .project {
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
   margin-bottom: 5rem;
 }
 section#project .project > * {
   width: 50%;
+}
+
+section#project .project-cover {
+  text-align: right;
 }
 
 section#skills {
@@ -390,22 +394,10 @@ a.button.outline:hover {
   width: 10px;
 }
 
-
-/*  Video Player */
-.project-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-top: 0.5rem;
-}
-.project-video {
-  width: 10px;
-}
-
 /*****************
     Media Queries
 ******************/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1450px) {
   section {
     padding: 3rem 2rem ;
   }
@@ -454,8 +446,8 @@ a.button.outline:hover {
     background: rgba(var(--primary-blue-rgb),0.75);
   }
 
-
-  .project-video {
+  section#project .project-cover {
     display: none;
   }
+
 }
