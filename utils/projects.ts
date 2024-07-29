@@ -27,12 +27,23 @@ export const projects : Project[] = [
         ]
     },
     {
+        title: "souch.ca",
+        slug: "souch-ca",
+        subtitle: "Photo Gallery Website",
+        summary: "souch.ca is my personal photography portfolio. The site is built with Vue3, using vite-ssg and Fancyapps for some ui components. It consumes the API from a self-hosted instance of Lychee Photo Manager to help with albums, content organization, and thumbnails.",
+        demoLink: "https://souch.ca",
+        repoLink: "https://github.com/aSouchereau/souch.ca",
+        tags: [
+            "Frontend", "Vue", "Typescript", "Vite"
+        ]
+    },
+    {
         title: "MC Route Manager",
         slug: "mc-route-manager",
         subtitle: "Client Connection Router for Minecraft Servers",
         summary: "MC Route Manager is a management system for a 3rd party tcp router for minecraft client connections. Built in Laravel, the system makes API calls to the router to manage routes. It adds extra functionality like persistent routes, route groups, garbage collection, toggleable and editable routes.",
         repoLink: 'https://github.com/aSouchereau/mcroute-manager',
-//        demoLink: 'https://mcrouter-demo.alexsouch.com/',
+        demoLink: 'https://mcrouter-demo.alexsouch.com/',
         video: "/videos/mcrouter-demo.mp4",
         tags: [
             "Fullstack", "Laravel", "Bootstrap", "Docker"
