@@ -22,6 +22,7 @@ export const projects : Project[] = [
         //],
         demoLink: 'https://city-cyclery.vercel.app/',
         repoLink: 'https://github.com/carbondesigned/CityCyclery',
+        cover: '/images/covers/cc-lm-light.svg',
         video: '/videos/citycyclery-demo.mp4',
         tags: [
             "Frontend", "NextJs", "Tailwind", "Typescript"
@@ -46,6 +47,7 @@ export const projects : Project[] = [
         summary: "MC Route Manager is a management system for a 3rd party tcp router for minecraft client connections. Built in Laravel, the system makes API calls to the router to manage routes. It adds extra functionality like persistent routes, route groups, garbage collection, toggleable and editable routes.",
         repoLink: 'https://github.com/aSouchereau/mcroute-manager',
         demoLink: 'https://mcrouter-demo.alexsouch.com/',
+        cover: '/images/covers/mcrouter_logomark.png',
         video: "/videos/mcrouter-demo.mp4",
         tags: [
             "Fullstack", "Laravel", "Bootstrap", "Docker"

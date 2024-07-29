@@ -44,7 +44,7 @@ export default function ProjectComponent(project: Project) {
     return <div className='project' id={project.slug}>
         <div className='project-cover'>
             {project.cover ?
-                    <Image src={project.cover} alt={project.title} width={250} height={280.5} quality={100}/>
+                    <Image src={project.cover} alt={project.title} width={200} height={200} quality={100} style={{ width: '250px', height: 'auto'}}/>
                 :
                 <></>
             }
